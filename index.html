@@ -155,6 +155,50 @@
     align-self: center;
   }
 
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--cream);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+  }
+
+  .highlight-icon {
+    width: 40px; height: 40px;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    background: rgba(11,37,69,0.07);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .highlight-icon svg {
+    width: 20px; height: 20px;
+    stroke: var(--navy-light);
+  }
+
+  .highlight-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .highlight-desc {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.55;
+  }
+
   /* ── DEPOT STRIP ── */
   .depots {
     background: var(--navy-mid);
@@ -638,6 +682,123 @@
   }
 
   @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── ABOUT STRIP ── */
+  .about-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 48px 24px;
+  }
+
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .trust-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    margin: 32px 0 40px;
+  }
+
+  .trust-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    background: var(--cream);
+  }
+
+  .trust-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .trust-stat-num span {
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .trust-stat-label {
+    font-size: 13px;
+    color: var(--gray-600);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .about-desc {
+    font-size: 16px;
+    color: var(--gray-600);
+    line-height: 1.75;
+    max-width: 780px;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  .about-desc strong { color: var(--navy); font-weight: 600; }
+
+  .brands-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .brands-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .brand-chip {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: rgba(11,37,69,0.05);
+    color: var(--navy);
+    border: 1px solid rgba(11,37,69,0.1);
+    white-space: nowrap;
+  }
+
+  .brand-chip.highlight {
+    background: rgba(200,151,58,0.1);
+    border-color: rgba(200,151,58,0.25);
+    color: #7a5a1a;
+  }
+
+  .websites-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy-light);
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid rgba(30,77,140,0.2);
+    border-radius: 100px;
+    background: rgba(30,77,140,0.04);
+    transition: background 0.15s;
+  }
+
+  .website-link:hover { background: rgba(30,77,140,0.1); }
+  .website-link svg { width: 13px; height: 13px; stroke: var(--navy-light); fill: none; stroke-width: 2; }
 </style>
 </head>
 <body>
@@ -666,6 +827,120 @@
     </div>
   </div>
 </header>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="about-inner">
+    <p class="section-label">About Ishwar Pharma</p>
+    <h2 class="section-title">Maharashtra's Most Trusted Pharma Wholesale Partner</h2>
+    <p class="about-desc">
+      Since <strong>2001</strong>, Ishwar Pharma has been a leading wholesaler and super distributor of generic medicines across Maharashtra. We are C&F and Super Distributors for all companies we deal in — purchasing <strong>directly from manufacturers</strong>, often with <strong>sole distribution rights for entire Maharashtra</strong>. From Mumbai Dawa Bazar to the most remote districts, we ensure timely delivery of essential pharmaceuticals to chemists, hospitals, exporters, and wholesalers.
+    </p>
+
+    <div class="trust-stats">
+      <div class="trust-stat">
+        <div class="trust-stat-num">2001<span> est.</span></div>
+        <div class="trust-stat-label">Over two decades of trusted operations in Maharashtra</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">₹100<span>Cr+</span></div>
+        <div class="trust-stat-label">Topline revenue, growing year on year</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">75<span>+</span></div>
+        <div class="trust-stat-label">Experienced professionals across 4 depot cities</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">8,000<span>+</span></div>
+        <div class="trust-stat-label">Pharma molecules & brands in our product basket</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">3,500<span>+</span></div>
+        <div class="trust-stat-label">Stockists & distributors in our network across Maharashtra</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-num">1L<span> sq ft</span></div>
+        <div class="trust-stat-label">State-of-the-art warehouse storage capacity</div>
+      </div>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">Critical & Specialty Care</div>
+          <div class="highlight-desc">Critical care, cardiac, diabetic, oncology, psychotropic, antibiotics, IV fluids, nutraceuticals and more — all under one roof.</div>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">4 Strategic Depots</div>
+          <div class="highlight-desc">Gigantic warehouses at Bhiwandi, Pune, Nagpur & Mumbai Dawa Bazar covering every big and small district of Maharashtra.</div>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">B2C via med50.com</div>
+          <div class="highlight-desc">Our consumer platform med50.com extends affordable generic medicines directly to patients and end consumers across India.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brands-label">Our Distribution Partners — Top Indian Pharma Companies</div>
+    <div class="brands-wrap">
+      <span class="brand-chip highlight">Abbott</span>
+      <span class="brand-chip highlight">Alkem</span>
+      <span class="brand-chip highlight">Intas</span>
+      <span class="brand-chip highlight">Lupin</span>
+      <span class="brand-chip highlight">Cadila</span>
+      <span class="brand-chip highlight">Emcure</span>
+      <span class="brand-chip highlight">Mylan</span>
+      <span class="brand-chip highlight">Aristo</span>
+      <span class="brand-chip highlight">Zydus</span>
+      <span class="brand-chip highlight">PMBI</span>
+      <span class="brand-chip">Akums</span>
+      <span class="brand-chip">Elder</span>
+      <span class="brand-chip">Theon</span>
+      <span class="brand-chip">Windlas</span>
+      <span class="brand-chip">Protech</span>
+      <span class="brand-chip">Arvincare</span>
+      <span class="brand-chip">Aesmira</span>
+      <span class="brand-chip">Nubeno</span>
+      <span class="brand-chip">Bionova</span>
+      <span class="brand-chip">Polymed</span>
+      <span class="brand-chip">Miracalus</span>
+      <span class="brand-chip">Naprod</span>
+      <span class="brand-chip">Romson</span>
+      <span class="brand-chip">Kemsyn</span>
+      <span class="brand-chip">CSC</span>
+      <span class="brand-chip">Dellwich</span>
+    </div>
+
+    <div class="websites-row">
+      <a href="https://www.ishwarpharma.com" target="_blank" class="website-link">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        ishwarpharma.com
+      </a>
+      <a href="https://www.ishwarpharma.in" target="_blank" class="website-link">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        ishwarpharma.in
+      </a>
+      <a href="https://www.med50.com" target="_blank" class="website-link">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        med50.com <span style="font-size:11px;color:var(--gold);margin-left:2px;">B2C</span>
+      </a>
+    </div>
+
+  </div>
+</section>
 
 <!-- DEPOT STRIP -->
 <div class="depots">
